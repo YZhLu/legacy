@@ -3,7 +3,7 @@
 
 <svelte:head>
 	<title>Legacy</title>
-	<meta name="description" content="Rotinas de treino do Aula Zero" />
+	<meta name="description" content="Aprenda matemática, pague o que quiser - Aula Zero, o aluno em primeiro lugar!" />
 </svelte:head>
 
 <section
