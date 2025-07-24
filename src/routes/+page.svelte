@@ -9,13 +9,13 @@
 <section
 	class="flex min-h-screen flex-col items-center justify-center px-4 py-8 dark:bg-surface-950 dark:text-white"
 >
-	<div class="flex w-full justify-around">
+	<div class="flex flex-col md:flex-row w-full justify-around items-center">
 		<!-- Imagem centralizada -->
 		<div class="mb-6 flex w-full max-w-xs items-center justify-center">
 			<picture>
 				<img
 					src="https://raw.githubusercontent.com/AulaZero/icons/refs/heads/main/icons/azr-white-bg-transparent.svg"
-					alt="Dojo"
+					alt="Aula Zero Logo"
 					class="h-auto w-80 max-w-xs"
 				/>
 			</picture>
