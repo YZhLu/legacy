@@ -1,108 +1,109 @@
 @import 'tailwindcss';
-@import '@fontsource/fira-mono';
+
+@import 'tailwindcss';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-:root {
-	--font-body:
-		Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-		'Open Sans', 'Helvetica Neue', sans-serif;
-	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
-	--color-text: rgba(0, 0, 0, 0.7);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
-	font-family: var(--font-body);
-	color: var(--color-text);
+
+/* @import '@fontsource/fira-mono'; */
+
+@font-face {
+	/* Reference name */
+	font-family: 'JungleAdventurer';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/JungleAdventurer.ttf');
 }
 
-body {
-	min-height: 100vh;
-	margin: 0;
-	background-attachment: fixed;
-	background-color: var(--color-bg-1);
-	background-size: 100vw 100vh;
-	background-image:
-		radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%),
-		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+@font-face {
+	/* Reference name */
+	font-family: 'RebellionSquad-ZpprZ';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/RebellionSquad-ZpprZ.ttf');
 }
 
-h1,
-h2,
-p {
-	font-weight: 400;
+@font-face {
+	/* Reference name */
+	font-family: 'LuckiestGuy';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/LuckiestGuy-Regular.ttf');
 }
 
-p {
-	line-height: 1.5;
+@font-face {
+	/* Reference name */
+	font-family: 'SanMarinoBeach';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/SanMarinoBeach.ttf');
 }
 
-a {
-	color: var(--color-theme-1);
-	text-decoration: none;
+@font-face {
+	/* Reference name */
+	font-family: 'NoContinue';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/gomarice_no_continue.ttf');
 }
 
-a:hover {
-	text-decoration: underline;
+@font-face {
+	/* Reference name */
+	font-family: 'BebasNeue';
+	/* For multiple files use commas, ex: url(), url(), ... */
+	src: url('/fonts/BebasNeue-Regular.ttf');
 }
 
-h1 {
-	font-size: 2rem;
-	text-align: center;
+@font-face {
+	/* Reference name */
+	font-family: 'Nunito';
+	src:
+		url('/fonts/nunito/Nunito-Regular.ttf'),
 }
 
-h2 {
-	font-size: 1rem;
+@font-face {
+	/* Reference name */
+	font-family: 'Nunito-Black';
+	src:
+		url('/fonts/nunito/Nunito-Black.ttf')
 }
 
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text);
+@font-face {
+	/* Reference name */
+	font-family: 'Nunito-Semibold';
+	src:
+		url('/fonts/nunito/Nunito-SemiBold.ttf')
 }
 
-.text-column {
-	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
+@font-face {
+	/* Reference name */
+	font-family: 'Nunito-Bold';
+	src:
+		url('/fonts/nunito/Nunito-Bold.ttf'),
+
 }
 
-input,
-button {
-	font-size: inherit;
-	font-family: inherit;
+@font-face {
+	/* Reference name */
+	font-family: 'Nunito-Light';
+	src:
+
+		url('/fonts/nunito/Nunito-Light.ttf');
 }
 
-button:focus:not(:focus-visible) {
-	outline: none;
-}
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+/* @import '@skeletonlabs/skeleton/themes/cerberus'; */
 
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
-}
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}
+/* Register a Custom Themes */
+/* Make sure to resolve the relative path. */
+/* Note the .css extension is optional. */
+@import './praxis.css';
+@custom-variant dark (&:where(.dark, .dark *));
+
+

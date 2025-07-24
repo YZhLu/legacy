@@ -1,10 +1,116 @@
 <!doctype html>
-<html lang="%paraglide.lang%">
+<html lang="%paraglide.lang%" data-theme="praxis">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.svg" />
+
+		<script>
+			// Check theme on page load or when changing themes
+			document.documentElement.classList.toggle(
+				'dark',
+				localStorage.theme === 'dark' ||
+					(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			);
+		</script>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/JungleAdventurer.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/RebellionSquad-ZpprZ.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/LuckiestGuy-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/SanMarinoBeach.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/gomarice_no_continue.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/BebasNeue-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/nunito/Nunito-Black.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/nunito/Nunito-Bold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/nunito/Nunito-Light.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/nunito/Nunito-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/nunito/Nunito-SemiBold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+			integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="%sveltekit.assets%/Temml-Local.css" />
+		<script type="module" src="%sveltekit.assets%/temml.mjs"></script>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="description"
+			content="Resolva seus problemas de matemática de forma divertida com os jogos interativos do AulaZero. Aprenda conceitos, melhore suas habilidades e se divirta enquanto pratica."
+		/>
+		<meta name="keywords" content="Jogos, matemática, Aula Zero" />
+		<meta name="author" content="Aula Zero" />
 		%sveltekit.head%
+
+		
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
