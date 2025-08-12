@@ -1,0 +1,21 @@
+export type GameVariables = {
+	isGameStarted: boolean;
+	transitioning: boolean;
+	theme: string;
+	srcImg: string;
+	message: string;
+	score: number;
+	totalScore: number;
+	time: number;
+	lastPartialTime: number;
+	hits: number;
+	misses: number;
+	count: number;
+	hitStreak: number;
+	missStreak: number;
+	momentumCount: number;
+	isGameOver: boolean;
+	totalAcertos: number;
+	totalErros: number;
+	processing: boolean;
+};
