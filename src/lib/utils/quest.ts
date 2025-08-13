@@ -35,6 +35,42 @@ export function findQuest(questData: any, targetQuestId: string): any | null {
 	return searchQuests(questData);
 }
 
+export function findSectionTitle(questData: any, targetQuestId: string): string | null {
+	function searchSections(node: any): string | null {
+		// Base case: if node is null or not an object
+		if (!node || typeof node !== 'object') return null;
+
+		// If node is an array, search through each element
+		if (Array.isArray(node)) {
+			for (const item of node) {
+				const result = searchSections(item);
+				if (result) return result;
+			}
+			return null;
+		}
+
+		// Check if current node is a section with quests
+		if (node.title && node.quests && Array.isArray(node.quests)) {
+			// Look for the quest in this section's quests
+			for (const quest of node.quests) {
+				if (quest.id === targetQuestId) {
+					return node.title;
+				}
+			}
+		}
+
+		// Recursively search through all object properties
+		for (const key in node) {
+			const result = searchSections(node[key]);
+			if (result) return result;
+		}
+
+		return null;
+	}
+
+	return searchSections(questData);
+}
+
 export function msToMinutes(ms: number): string {
 	const minutes = Math.floor(ms / 60000);
 	const seconds = ((ms % 60000) / 1000).toFixed(0);
