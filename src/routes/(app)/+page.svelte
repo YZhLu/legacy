@@ -120,7 +120,7 @@
 			uma plataforma online, gratuita e acessível a todos.
 		</p>
 		<p>
-			O objetivo é oferecer um conteúdo de qualidade, com foco na prática e na resolução de
+			O objetivo é oferecer aprendizagem matemática de forma simples e acessível, com foco na prática e na resolução de
 			problemas do dia a dia.
 		</p>
 		<p>Nosso compromisso é com a educação de qualidade, sem barreiras financeiras.</p>
