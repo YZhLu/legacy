@@ -129,7 +129,7 @@
 		};
 
 		
-		//await goto('../', { invalidate: [(url: URL) => true] });
+		await goto('../', { invalidate: [(url: URL) => true] });
 		notifyParentFrame({ action: 'goback', url: '' });
 
 		showModal = false;
@@ -154,8 +154,8 @@
 				} else if (event.key === ' ') {
 					skipQuestion();
 				} else if (event.key === 'Escape') {
-					// goto('../');
-					notifyParentFrame({ action: 'goback', url: '' });
+					goto('../');
+					// notifyParentFrame({ action: 'goback', url: '' });
 				}
 			}
 		};
@@ -173,6 +173,7 @@
 
 	function handleBack(event: MouseEvent & { currentTarget: EventTarget & HTMLButtonElement }) {
 		notifyParentFrame({ action: 'goback', url: '' });
+		goto('../');
 	}
 
 	let audioMissElement: HTMLAudioElement,
@@ -181,8 +182,8 @@
 		audioGoodEndingElement: HTMLAudioElement,
 		audioBadEndingElement: HTMLAudioElement;
 
-	let hitAudioSrc = '/duolingo-correct.mp3';
-	let missAudioSrc = '/duolingo-wrong.mp3';
+	let hitAudioSrc = '/correct.mp3';
+	let missAudioSrc = '/wrong.mp3';
 	let skipAudioSrc = '/skip.mp3';
 	let goodEndingAudioSrc = '/goodEnding.mp3';
 	let badEndingAudioSrc = '/badEnding.mp3';

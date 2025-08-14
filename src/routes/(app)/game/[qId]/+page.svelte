@@ -43,8 +43,8 @@
 			if (event.key === 'Enter') {
 				goto(pathname + '/' + value);
 			} else if (event.key === 'Escape') {
-				// goto('../');
-				notifyParentFrame({ action: 'goback', url: `` });
+				goto('./');
+				// notifyParentFrame({ action: 'goback', url: `` });
 			}
 		};
 
@@ -68,6 +68,7 @@
 	});
 
 	function handleBack() {
+		goto('./');
 		notifyParentFrame({ action: 'goback', url: `` });
 	}
 </script>

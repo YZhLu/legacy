@@ -134,8 +134,8 @@
 		audioGoodEndingElement: HTMLAudioElement,
 		audioBadEndingElement: HTMLAudioElement;
 
-	let hitAudioSrc = '/duolingo-correct.mp3';
-	let missAudioSrc = '/duolingo-wrong.mp3';
+	let hitAudioSrc = '/correct.mp3';
+	let missAudioSrc = '/wrong.mp3';
 	let skipAudioSrc = '/skip.mp3';
 	let goodEndingAudioSrc = '/goodEnding.mp3';
 	let badEndingAudioSrc = '/badEnding.mp3';
